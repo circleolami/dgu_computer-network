@@ -1,0 +1,7 @@
+Q. Write a program to implement CDMA. Assume that the length of a chip sequence is eight and the number of stations transmitting is four. 
+Your program consists of three sets of processes: four transmitter processes (t0, t1, t2 and t3), one joiner process, and four receiver processes (r0, r1, r2, and r3).
+The main program, which also acts as the joiner process first reads four chip sequences(bipolar notation) from the standard input and a sequence of 4 bits (1 bit per transmitter process to be transmitted), and forks off four pairs of transmitter and receiver processes. 
+Each pair of transmitter/receiver processes (t0, r0; t1, r1; t2, r2; t3, r3) is assigned one chip sequence and each transmitter process computes the signal to be transmitted (a sequence of 8 bits) and sends it to the joiner process. 
+After receiving signals from all four transmitter processes, the joiner process combines the signals and sends the combined signal to the four receiver processes.
+Each receiver process then computes the bit it has received and prints it to standard output. 
+Use pipes for communication between processes. 
